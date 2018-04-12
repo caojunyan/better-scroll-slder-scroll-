@@ -15,12 +15,16 @@
           <li>{{item}}</li>
         </ul>
       </div>
+      <div class="loading-container" v-show="show">
+        <loading></loading>
+      </div>
     </scroll>
   </div>
 </template>
 <script>
   import Slider from '../slider/slider'
   import Scroll from '../scroll/scroll'
+  import Loading from '../loading/loading'
   export default {
     data () {
       return {
@@ -29,7 +33,9 @@
           {url: 'https://y.gtimg.cn/music/photo_new/T003R720x288M000004ERTpn1UBu2f.jpg?max_age=2592000&max_age=2592000'},
           {url: 'https://y.gtimg.cn/music/photo_new/T003R720x288M00000077s7P0HaZpc.jpg?max_age=2592000&max_age=2592000'},
           {url: 'https://y.gtimg.cn/music/photo_new/T003R720x288M000001QL1Si05yMPq.jpg?max_age=2592000&max_age=2592000'},
+          {url: 'https://y.gtimg.cn/music/photo_new/T003R720x288M000002ke7OC3ooZ5g.jpg?max_age=2592000&max_age=2592000'},
         ],
+        show:true,
         su:[1,2,3,4,5,6,7,8,9,10,1,2,3,4,2,3,5,8,7,4,1,1,1,1,1,1,1,11,1,1,1,1,11,1,1,1,1,1,1,11,1,1,1,1,1,1,1,1,1,1,1,1,]
       }
     },
@@ -37,7 +43,8 @@
     },
     components: {
       Slider,
-      Scroll
+      Scroll,
+      Loading
     }
   }
 </script>
@@ -56,5 +63,11 @@
   }
   .scroll{
     height: 100%;
+  }
+  .loading-container {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
   }
 </style>
