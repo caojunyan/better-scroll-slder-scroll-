@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="content">
     <scroll :data="su" class="scroll">
       <div>
         <div class="slider-wrapper">
@@ -11,7 +11,7 @@
             </div>
           </slider>
         </div>
-        <ul v-for='item in su'>
+        <ul v-for='(item,index) in su' :key="index">
           <li>{{item}}</li>
         </ul>
       </div>
@@ -29,7 +29,6 @@
           {url: 'https://y.gtimg.cn/music/photo_new/T003R720x288M000004ERTpn1UBu2f.jpg?max_age=2592000&max_age=2592000'},
           {url: 'https://y.gtimg.cn/music/photo_new/T003R720x288M00000077s7P0HaZpc.jpg?max_age=2592000&max_age=2592000'},
           {url: 'https://y.gtimg.cn/music/photo_new/T003R720x288M000001QL1Si05yMPq.jpg?max_age=2592000&max_age=2592000'},
-          {url: 'https://y.gtimg.cn/music/photo_new/T003R720x288M000002ke7OC3ooZ5g.jpg?max_age=2592000&max_age=2592000'},
         ],
         su:[1,2,3,4,5,6,7,8,9,10,1,2,3,4,2,3,5,8,7,4,1,1,1,1,1,1,1,11,1,1,1,1,11,1,1,1,1,1,1,11,1,1,1,1,1,1,1,1,1,1,1,1,]
       }
@@ -43,12 +42,19 @@
   }
 </script>
 <style>
+  .content{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    bottom: 0;
+    height: 100%;
+  }
   .slider-wrapper{
     width: 100%;
     position: relative;
     overflow: hidden;
   }
   .scroll{
-    height: 500px;
+    height: 100%;
   }
 </style>
