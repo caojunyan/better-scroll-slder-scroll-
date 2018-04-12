@@ -25,6 +25,8 @@
   import Slider from '../slider/slider'
   import Scroll from '../scroll/scroll'
   import Loading from '../loading/loading'
+
+
   export default {
     data () {
       return {
@@ -39,8 +41,7 @@
         su:[1,2,3,4,5,6,7,8,9,10,1,2,3,4,2,3,5,8,7,4,1,1,1,1,1,1,1,11,1,1,1,1,11,1,1,1,1,1,1,11,1,1,1,1,1,1,1,1,1,1,1,1,]
       }
     },
-    methods: {
-    },
+
     components: {
       Slider,
       Scroll,
